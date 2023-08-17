@@ -5,8 +5,10 @@ public class Cli {
     public static void askName() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");
-        String userName = scanner.next();
+        String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
-        scanner.close();
+        Greet.gameGreetStart(userName);
     }
+
+
 }
