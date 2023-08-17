@@ -2,10 +2,14 @@ package hexlet.code;
 import java.util.Scanner;
 
 
-public class Greet {
-    public static void gameGreetStart(String userName) {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+public class Even {
+    public static void gameEven() {
+        System.out.println("Welcome to the Brain Games!");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("May I have your name? ");
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int count = 0;
             while (count < 3) {
                 int getRandomNumber = (int) (Math.random() * 100);
@@ -22,7 +26,7 @@ public class Greet {
                     }
                 if ((getRandomNumber % 2 == 0) & !(playerAnswer.equals("yes"))) {
                     System.out.println(playerAnswer + " is wrong answer ;(. Correct answer was 'yes'.");
-                    System.out.println("Let's try again, "  + userName);
+                    System.out.println("Let's try again, " + userName);
                     break;
                 } else if ((getRandomNumber % 2 !=0) & !(playerAnswer.equals("no"))) {
                     System.out.println(playerAnswer + " is wrong answer ;(. Correct answer was 'no'.");
