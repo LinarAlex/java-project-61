@@ -1,21 +1,15 @@
 package hexlet.code;
-import java.util.Scanner;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 public class App {
     public static void main(String[] args) {
-        int gameNumber0 = 0;
-        int gameNumber1 = 1;
-        int gameNumber2 = 2;
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println(gameNumber1 + " - Greet");
-        System.out.println(gameNumber2 + " - Even");
-        System.out.println(gameNumber0 + " - Exit");
-        Scanner scanner = new Scanner(System.in);
-        int gameChoice = scanner.nextInt();
-        if (gameChoice == gameNumber1) {
-            Cli.askName();
-        }
-        if (gameChoice == gameNumber2) {
-            Even.gameEven();
+        int gameChoice = Engine.menu();
+        switch (gameChoice) {
+            case 1 -> Cli.askName();
+            case 2 -> Even.gameEven();
+            case 3 -> Calc.gameCalc();
+            default -> System.out.println("exit");
         }
     }
 
