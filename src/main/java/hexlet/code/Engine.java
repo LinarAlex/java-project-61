@@ -7,10 +7,12 @@ public class Engine {
         int gameNumber1 = 1;
         int gameNumber2 = 2;
         int gameNumber3 = 3;
+        int gameNumber4 = 4;
         System.out.println("Please enter the game number and press Enter.");
         System.out.println(gameNumber1 + " - Greet");
         System.out.println(gameNumber2 + " - Even");
         System.out.println(gameNumber3 + " - Calc");
+        System.out.println(gameNumber4 + " - GCD");
         System.out.println(gameNumber0 + " - Exit");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
