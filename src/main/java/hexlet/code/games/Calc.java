@@ -1,43 +1,40 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-
-import java.util.Scanner;
 import java.util.Random;
 
 public class Calc {
     public static void gameCalc() {
-        Scanner scanner = new Scanner(System.in);
         Engine.greet();
         System.out.println("What is the result of the expression?");
         String[] operators = {"+", "-", "*"};
+        int maxCount = 3;
+        int field = 2;
         int count = 0;
-        while (count < 3) {
-            int num1 = Engine.getRandomNumber();
-            int num2 = Engine.getRandomNumber();
-            String randomExpression = operators[getRandomIndex(operators)];
-            System.out.println("Question: " + num1 + " " + randomExpression + " " + num2);
-            System.out.print("Your answer: ");
-            int playerAnswer = scanner.nextInt();
-            int rightAnswer = checkAnswer(num1, num2, randomExpression);
-            if (Engine.checkAnswer(rightAnswer == playerAnswer, rightAnswer, playerAnswer)) {
-                break;
+        Random random = new Random();
+        String[][] arrayRound = new String[maxCount][field];
+        while (count < maxCount) {
+            for (int i = 0; i < maxCount; i++) {
+                int num1 = random.nextInt(101);
+                int num2 = random.nextInt(101);
+                String randomExpression = operators[getRandomIndex(operators)];
+                arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
+                arrayRound[i][1] = checkAnswer(randomExpression, num1, num2);
             }
             count++;
-        }
-        if (count == 3) {
-            Engine.congratulation();
-        }
+        } Engine.userInteraction(arrayRound);
     }
+
     public static int getRandomIndex(String[] operator) {
         return new Random().nextInt(operator.length);
     }
 
-    public static int checkAnswer(int num1, int num2, String randomExp) {
-        return switch (randomExp) {
+    public static String checkAnswer(String randomExpression, int num1, int num2) {
+        int result = switch (randomExpression) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
             default -> 0;
         };
+        return Integer.toString(result);
     }
 }

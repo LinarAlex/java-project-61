@@ -8,4 +8,7 @@ https://asciinema.org/a/ZD4mpxFdmIrsyQ91eeXki8n11
 https://asciinema.org/a/olbpOrkMGnx7qvAaZ7a5EBN5J
 ## Step 7
 https://asciinema.org/a/rnvO2fWLeIc8zANgbyMj8ewtA
+## Step 8
+https://asciinema.org/a/8HRgBvG34gz5zY6BQOHCR5EGP
+
 
