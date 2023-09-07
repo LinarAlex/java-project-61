@@ -10,13 +10,13 @@ public class GCD {
     public static void gameGCD() {
         Engine.greet();
         System.out.println("Find the greatest common divisor of given numbers.");
-        int maxOfRounds = 3;
+        int maxOfCounts = 3;
         int field = 2;
         int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[maxOfRounds][field];
-        while (count < maxOfRounds) {
-            for (int i = 0; i < maxOfRounds; i++) {
+        String[][] arrayRound = new String[maxOfCounts][field];
+        while (count < maxOfCounts) {
+            for (int i = 0; i < maxOfCounts; i++) {
                 int num1 = random.nextInt(LIMIT);
                 int num2 = random.nextInt(LIMIT);
                 arrayRound[i][0] = num1 + " " + num2;
