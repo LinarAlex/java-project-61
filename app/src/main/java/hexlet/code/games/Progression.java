@@ -6,20 +6,20 @@ import java.util.Random;
 
 
 public class Progression {
-    private static final int FIRSTPOINT = 5;
-    private static final int LASTPOINT = 11;
-    private  static final int DIFFERENCE = 10;
-    private static final int LIMIT = 101;
+    public static final int FIRSTPOINT = 5;
+    public static final int LASTPOINT = 11;
+    public  static final int DIFFERENCE = 10;
+    public static final int LIMIT = 101;
+    public static final int MAX_COUNT = 3;
     public static void gameProgression() {
         Engine.greet();
         System.out.println("What number is missing in the progression?");
-        int maxRound = 3;
         int field = 2;
         int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[maxRound][field];
-        while (count < maxRound) {
-            for (int i = 0; i < maxRound; i++) {
+        String[][] arrayRound = new String[MAX_COUNT][field];
+        while (count < MAX_COUNT) {
+            for (int i = 0; i < MAX_COUNT; i++) {
                 int progressionLength = random.nextInt(FIRSTPOINT, LASTPOINT);
                 int difference = random.nextInt(DIFFERENCE);
                 int starProgression = random.nextInt(LIMIT);

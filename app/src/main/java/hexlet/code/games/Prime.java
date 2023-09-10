@@ -4,17 +4,17 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
-    private static final int LIMIT = 101;
+    public static final int LIMIT = 101;
+    public static final int MAX_COUNT = 3;
     public static void gamePrime() {
         Engine.greet();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        int maxRound = 3;
         int field = 2;
         int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[maxRound][field];
-        while (count < maxRound) {
-            for (int i = 0; i < maxRound; i++) {
+        String[][] arrayRound = new String[MAX_COUNT][field];
+        while (count < MAX_COUNT) {
+            for (int i = 0; i < MAX_COUNT; i++) {
                 int randomNumber = random.nextInt(LIMIT);
                 arrayRound[i][0] = Integer.toString(randomNumber);
                 arrayRound[i][1] = isPrime(randomNumber) ? "yes" : "no";

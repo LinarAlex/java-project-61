@@ -4,17 +4,17 @@ import java.util.Random;
 
 public class Calc {
     public static final int LIMIT = 101;
+    public static final int MAX_COUNT = 3;
     public static void gameCalc() {
         Engine.greet();
         System.out.println("What is the result of the expression?");
         String[] operators = {"+", "-", "*"};
-        int maxRound = 3;
         int field = 2;
         int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[maxRound][field];
-        while (count < maxRound) {
-            for (int i = 0; i < maxRound; i++) {
+        String[][] arrayRound = new String[MAX_COUNT][field];
+        while (count < MAX_COUNT) {
+            for (int i = 0; i < MAX_COUNT; i++) {
                 int num1 = random.nextInt(LIMIT);
                 int num2 = random.nextInt(LIMIT);
                 String randomExpression = operators[getRandomIndex(operators)];

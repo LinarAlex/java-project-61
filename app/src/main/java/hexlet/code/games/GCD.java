@@ -6,17 +6,17 @@ import java.util.Random;
 
 
 public class GCD {
-    private static final int LIMIT = 101;
+    public static final int LIMIT = 101;
+    public static final int MAX_COUNT = 3;
     public static void gameGCD() {
         Engine.greet();
         System.out.println("Find the greatest common divisor of given numbers.");
-        int maxOfCounts = 3;
         int field = 2;
         int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[maxOfCounts][field];
-        while (count < maxOfCounts) {
-            for (int i = 0; i < maxOfCounts; i++) {
+        String[][] arrayRound = new String[MAX_COUNT][field];
+        while (count < MAX_COUNT) {
+            for (int i = 0; i < MAX_COUNT; i++) {
                 int num1 = random.nextInt(LIMIT);
                 int num2 = random.nextInt(LIMIT);
                 arrayRound[i][0] = num1 + " " + num2;

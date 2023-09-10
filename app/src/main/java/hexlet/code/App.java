@@ -20,14 +20,14 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
-        int gameChoice = scanner.nextInt();
+        String gameChoice = scanner.nextLine();
         switch (gameChoice) {
-            case 1 -> Cli.askName();
-            case 2 -> Even.gameEven();
-            case 3 -> Calc.gameCalc();
-            case 4 -> GCD.gameGCD();
-            case 5 -> Progression.gameProgression();
-            case 6 -> Prime.gamePrime();
+            case "1" -> Cli.askName();
+            case "2" -> Even.gameEven();
+            case "3" -> Calc.gameCalc();
+            case "4" -> GCD.gameGCD();
+            case "5" -> Progression.gameProgression();
+            case "6" -> Prime.gamePrime();
             default -> System.out.println("exit");
         }
     }
