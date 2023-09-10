@@ -8,7 +8,6 @@ import java.util.Random;
 public class Progression {
 
     public static void gameProgression() {
-      //  Engine.greet();
         System.out.println("What number is missing in the progression?");
         Random random = new Random();
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
