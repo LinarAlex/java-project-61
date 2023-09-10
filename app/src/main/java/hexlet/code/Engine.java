@@ -2,7 +2,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-
+    public static final int MAX_ROUNDS = 3;
+    public static final int FIELDS = 2;
+    public static final int LIMIT = 101;
+    public static final int FIRST_POINT = 5;
+    public static final int LAST_POINT = 11;
+    public static final int DIFFERENCE = 10;
     private static String userName;
     public static String name() {
         Scanner scanner = new Scanner(System.in);
@@ -12,6 +17,7 @@ public class Engine {
     public static String getUserName() {
         return userName;
     }
+
     public static void greet() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -19,10 +25,10 @@ public class Engine {
         System.out.println("Hello, " + playerName + "!");
     }
     public static void userInteraction(String[][] arrayRound) {
+        greet();
         Scanner scanner = new Scanner(System.in);
-        final int maxRound = 3;
         int round = 0;
-        while (round < maxRound) {
+        while (round < MAX_ROUNDS) {
             System.out.println("Question: " + arrayRound[round][0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.next();
@@ -30,7 +36,7 @@ public class Engine {
                 break;
             }
             round += 1;
-            Engine.congratulation(round == maxRound);
+            Engine.congratulation(round == MAX_ROUNDS);
         }
     }
     public static boolean checkAnswer(boolean check, Object rightAnswer, Object playerAnswer) {

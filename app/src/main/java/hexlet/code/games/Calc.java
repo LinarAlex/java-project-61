@@ -3,25 +3,20 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-    public static final int LIMIT = 101;
-    public static final int MAX_COUNT = 3;
+
     public static void gameCalc() {
-        Engine.greet();
         System.out.println("What is the result of the expression?");
         String[] operators = {"+", "-", "*"};
-        int field = 2;
-        int count = 0;
         Random random = new Random();
-        String[][] arrayRound = new String[MAX_COUNT][field];
-        while (count < MAX_COUNT) {
-            for (int i = 0; i < MAX_COUNT; i++) {
-                int num1 = random.nextInt(LIMIT);
-                int num2 = random.nextInt(LIMIT);
+        String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
+        for (int count = 0; count < Engine.MAX_ROUNDS; count++) {
+            for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
+                int num1 = random.nextInt(Engine.LIMIT);
+                int num2 = random.nextInt(Engine.LIMIT);
                 String randomExpression = operators[getRandomIndex(operators)];
                 arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
                 arrayRound[i][1] = checkAnswer(randomExpression, num1, num2);
             }
-            count++;
         } Engine.userInteraction(arrayRound);
     }
 
