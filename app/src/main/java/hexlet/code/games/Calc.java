@@ -1,36 +1,34 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Calc {
+    public static final String TEXT = "What is the result of the expression?";
 
-    public static void gameCalc() {
-        System.out.println("What is the result of the expression?");
+    public static void initiateCalc() {
         String[] operators = {"+", "-", "*"};
-        Random random = new Random();
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
         for (int count = 0; count < Engine.MAX_ROUNDS; count++) {
             for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-                int num1 = random.nextInt(Engine.LIMIT);
-                int num2 = random.nextInt(Engine.LIMIT);
+                int num1 = Utils.getRandomNumber(Engine.LIMIT);
+                int num2 = Utils.getRandomNumber(Engine.LIMIT);
                 String randomExpression = operators[getRandomIndex(operators)];
                 arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
-                arrayRound[i][1] = checkAnswer(randomExpression, num1, num2);
+                arrayRound[i][1] = Integer.toString(calculate(randomExpression, num1, num2));
             }
-        } Engine.userInteraction(arrayRound);
+        } Engine.getGameLogic(arrayRound, TEXT);
     }
 
     public static int getRandomIndex(String[] operator) {
-        return new Random().nextInt(operator.length);
+        return Utils.getRandomNumber(operator.length);
     }
 
-    public static String checkAnswer(String randomExpression, int num1, int num2) {
-        int result = switch (randomExpression) {
+    public static int calculate(String randomExpression, int num1, int num2) {
+        return switch (randomExpression) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
             default -> 0;
         };
-        return Integer.toString(result);
     }
 }
