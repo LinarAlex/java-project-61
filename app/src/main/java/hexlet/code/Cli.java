@@ -9,6 +9,4 @@ public class Cli {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
     }
-
-
 }

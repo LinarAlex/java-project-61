@@ -7,8 +7,8 @@ public class Utils {
         Random random = new Random();
         return random.nextInt(bound1);
     }
-    public static int getRandomNumber(int bound1, int bound2) {
+    public static int getRandomNumber(int lowBound, int upBound) {
         Random random = new Random();
-        return random.nextInt(bound1, bound2);
+        return random.nextInt(lowBound, upBound     );
     }
 }

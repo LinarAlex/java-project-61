@@ -6,6 +6,7 @@ import hexlet.code.Utils;
 
 public class Progression {
     public static final String RULES = "What number is missing in the progression?";
+    public static final int LIMIT = 101;
 
     public static void initiateProgression() {
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
@@ -20,10 +21,11 @@ public class Progression {
         }
         Engine.getGameLogic(arrayRound, RULES);
     }
-    public static String[] createProgression() {
+
+    private static String[] createProgression() {
         int progressionLength = Utils.getRandomNumber(Engine.FIRST_POINT, Engine.LAST_POINT);
         int difference = Utils.getRandomNumber(Engine.DIFFERENCE);
-        int starProgression = Utils.getRandomNumber(Engine.LIMIT);
+        int starProgression = Utils.getRandomNumber(LIMIT);
         int[] array = new int[progressionLength];
         for (int j = 0; j < array.length; j++) {
             array[j] = starProgression + (j * difference);
