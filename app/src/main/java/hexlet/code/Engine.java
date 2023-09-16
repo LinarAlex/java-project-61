@@ -15,7 +15,7 @@ public class Engine {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
-        for (int round = 0; round <= MAX_ROUNDS; round++) {
+        for (int round = 0; round < MAX_ROUNDS; round++) {
             System.out.println("Question: " + arrayRound[round][0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.next();
@@ -27,7 +27,7 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
-            if (round == MAX_ROUNDS) {
+            if (round == MAX_ROUNDS - 1) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }
