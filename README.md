@@ -16,6 +16,7 @@ make test
 
 make lint
 
+
 Links to asciinema with recording two outcomes (win and lose) for each game
 ## Step 5
 https://asciinema.org/a/ZD4mpxFdmIrsyQ91eeXki8n11
