@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Engine {
     public static final int MAX_ROUNDS = 3;
     public static final int FIELDS = 2;
-    public static final int LIMIT = 101;
     public static final int FIRST_POINT = 5;
     public static final int LAST_POINT = 11;
     public static final int DIFFERENCE = 10;
@@ -16,8 +15,7 @@ public class Engine {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
-        int round = 0;
-        while (round < MAX_ROUNDS) {
+        for (int round = 0; round <= MAX_ROUNDS; round++) {
             System.out.println("Question: " + arrayRound[round][0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.next();
@@ -29,7 +27,6 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
-            round++;
             if (round == MAX_ROUNDS) {
                 System.out.println("Congratulations, " + userName + "!");
             }

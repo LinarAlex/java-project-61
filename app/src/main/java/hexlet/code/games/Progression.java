@@ -13,7 +13,7 @@ public class Progression {
         for (int count = 0; count < Engine.MAX_ROUNDS; count++) {
             for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
                 String[] stringOfProgression = createProgression();
-                int randomIndex = Utils.getRandomNumber(stringOfProgression.length);
+                int randomIndex = Utils.getRandomNumber(0, stringOfProgression.length);
                 arrayRound[i][1] = stringOfProgression[randomIndex];
                 stringOfProgression[randomIndex] = "..";
                 arrayRound[i][0] = String.join(" ", stringOfProgression);
@@ -24,8 +24,8 @@ public class Progression {
 
     private static String[] createProgression() {
         int progressionLength = Utils.getRandomNumber(Engine.FIRST_POINT, Engine.LAST_POINT);
-        int difference = Utils.getRandomNumber(Engine.DIFFERENCE);
-        int starProgression = Utils.getRandomNumber(LIMIT);
+        int difference = Utils.getRandomNumber(0, Engine.DIFFERENCE);
+        int starProgression = Utils.getRandomNumber(0, LIMIT);
         int[] array = new int[progressionLength];
         for (int j = 0; j < array.length; j++) {
             array[j] = starProgression + (j * difference);
