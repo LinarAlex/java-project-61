@@ -2,13 +2,26 @@
 [![Actions Status](https://github.com/LinarAlex/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/LinarAlex/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/badc0b552b72c1d043ee/maintainability)](https://codeclimate.com/github/LinarAlex/java-project-61/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/badc0b552b72c1d043ee/test_coverage)](https://codeclimate.com/github/LinarAlex/java-project-61/test_coverage)
-## First project on Hexlet
+ First project on Hexlet "Brain games!". One engine and 5 games.
 ## RUN
+
+'''bash
 make run-dist:
+'''
+
 ## RUN TEST
+
+'''bash
 make test
+'''
+
 ## RUN CHECKSTYLE
+
+'''bash
 make lint
+'''
+
+Links to asciinema with recording two outcomes (win and lose) for each game
 ## Step 5
 https://asciinema.org/a/ZD4mpxFdmIrsyQ91eeXki8n11
 ## Step 6
