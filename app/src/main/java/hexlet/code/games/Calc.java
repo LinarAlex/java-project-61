@@ -9,15 +9,14 @@ public class Calc {
     public static void initiateCalc() {
         String[] operators = {"+", "-", "*"};
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
-        for (int count = 0; count < Engine.MAX_ROUNDS; count++) {
-            for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-                int num1 = Utils.getRandomNumber(0, LIMIT);
-                int num2 = Utils.getRandomNumber(0, LIMIT);
-                String randomExpression = operators[Utils.getRandomNumber(0, operators.length)];
-                arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
-                arrayRound[i][1] = Integer.toString(calculate(randomExpression, num1, num2));
-            }
-        } Engine.getGameLogic(arrayRound, TEXT);
+        for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
+            int num1 = Utils.getRandomNumber(0, LIMIT);
+            int num2 = Utils.getRandomNumber(0, LIMIT);
+            String randomExpression = operators[Utils.getRandomNumber(0, operators.length)];
+            arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
+            arrayRound[i][1] = Integer.toString(calculate(randomExpression, num1, num2));
+        }
+        Engine.getGameLogic(arrayRound, TEXT);
     }
 
     private static int calculate(String randomExpression, int num1, int num2) {
