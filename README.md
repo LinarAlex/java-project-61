@@ -8,10 +8,6 @@
 
 make run-dist:
 
-## RUN TEST
-
-make test
-
 ## RUN CHECKSTYLE
 
 make lint

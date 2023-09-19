@@ -12,8 +12,8 @@ public class GCD {
     public static void initiateGCD() {
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-            int num1 = Utils.getRandomNumber(0, LIMIT);
-            int num2 = Utils.getRandomNumber(0, LIMIT);
+            int num1 = Utils.getRandomNumber(LIMIT);
+            int num2 = Utils.getRandomNumber(LIMIT);
             arrayRound[i][0] = num1 + " " + num2;
             arrayRound[i][1] = Integer.toString(getGCD(num1, num2));
         }

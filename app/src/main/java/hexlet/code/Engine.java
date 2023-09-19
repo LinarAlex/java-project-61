@@ -4,9 +4,6 @@ import java.util.Scanner;
 public class Engine {
     public static final int MAX_ROUNDS = 3;
     public static final int FIELDS = 2;
-    public static final int FIRST_POINT = 5;
-    public static final int LAST_POINT = 11;
-    public static final int DIFFERENCE = 10;
 
     public static void getGameLogic(String[][] arrayRound, String rules) {
         Scanner scanner = new Scanner(System.in);
@@ -27,9 +24,6 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
-            if (round == MAX_ROUNDS - 1) {
-                System.out.println("Congratulations, " + userName + "!");
-            }
-        }
+        }  System.out.println("Congratulations, " + userName + "!");
     }
 }

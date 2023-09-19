@@ -10,8 +10,8 @@ public class Calc {
         String[] operators = {"+", "-", "*"};
         String[][] arrayRound = new String[Engine.MAX_ROUNDS][Engine.FIELDS];
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-            int num1 = Utils.getRandomNumber(0, LIMIT);
-            int num2 = Utils.getRandomNumber(0, LIMIT);
+            int num1 = Utils.getRandomNumber(LIMIT);
+            int num2 = Utils.getRandomNumber(LIMIT);
             String randomExpression = operators[Utils.getRandomNumber(0, operators.length)];
             arrayRound[i][0] = num1 + " " + randomExpression + " " + num2;
             arrayRound[i][1] = Integer.toString(calculate(randomExpression, num1, num2));
