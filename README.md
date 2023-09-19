@@ -4,6 +4,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/badc0b552b72c1d043ee/test_coverage)](https://codeclimate.com/github/LinarAlex/java-project-61/test_coverage)
 
  First project on Hexlet "Brain games!". One engine and 5 games.
+
+## RUN FROM PROJECT
+
+make -C app run-dist
+
 ## RUN
 
 make run-dist:
